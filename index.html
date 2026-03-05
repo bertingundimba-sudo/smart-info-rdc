@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre principal -->
+    <title>Bertin Gundimba Konzi | Fondateur de Smart Info RDC - Informatique Intelligente pour la RDC</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Site officiel de Bertin Gundimba Konzi, étudiant en Informatique de Gestion et fondateur de Smart Info RDC. Centre de formation en informatique, développement logiciel, intelligence artificielle et transformation numérique en RDC.">
+    <meta name="keywords" content="Bertin Gundimba Konzi, Smart Info RDC, Informatique RDC, Formation informatique, Développement logiciel, Intelligence artificielle, Programmation Python, Java, HTML, CSS, JavaScript, Gestion informatique">
+    <meta name="author" content="Bertin Gundimba Konzi">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Bertin Gundimba Konzi | Smart Info RDC">
+    <meta property="og:description" content="Fondateur de Smart Info RDC - Informatique Intelligente pour la RDC. Formation, développement logiciel et innovation technologique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.smartinfordc.com">
+    <meta property="og:image" content="https://www.smartinfordc.com/image-profil.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bertin Gundimba Konzi | Smart Info RDC">
+    <meta name="twitter:description" content="Informatique Intelligente pour la RDC - Formation et innovation technologique.">
+    <meta name="twitter:image" content="https://www.smartinfordc.com/image-profil.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-smartinfo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Police Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Style personnalisé -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        :root {
+            --primary: #1e40af;
+            --secondary: #3b82f6;
+            --accent: #f59e0b;
+        }
+
+        body { font-family: 'Poppins', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+
+        /* Animations */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        /* Timeline Custom */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #cbd5e1;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-container::before { left: 20px; }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer">
+                <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:rotate-12 transition-transform">
+                    <rect width="100" height="100" rx="15" fill="#1e40af"/>
+                    <path d="M30 55L45 70L75 35" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="75" cy="35" r="7" fill="#f59e0b"/>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-blue-900 leading-none">SMART INFO</span>
+                    <span class="text-xs font-semibold text-blue-600 tracking-tighter uppercase">République Démocratique du Congo</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#accueil" class="hover:text-blue-600 transition">Accueil</a>
+                <a href="#histoire" class="hover:text-blue-600 transition">Parcours</a>
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Projets</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-blue-900"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 flex flex-col shadow-xl">
+            <a href="#accueil" class="text-lg font-semibold">Accueil</a>
+            <a href="#histoire">Mon Histoire</a>
+            <a href="#services">Smart Info Services</a>
+            <a href="#portfolio">Mes Logiciels</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="accueil" class="pt-40 pb-32 gradient-hero text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10">
+            <i class="fas fa-code text-[20rem] -rotate-12"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <h2 class="inline-block px-4 py-1 border border-blue-400 rounded-full text-blue-300 text-sm font-bold uppercase tracking-widest mb-2">Futur de la Tech à Gemena</h2>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">Bertin Gundimba <span class="text-amber-400 text-shadow">Konzi</span></h1>
+                <p class="text-xl text-blue-100 max-w-xl">Étudiant en Informatique de Gestion et visionnaire technologique. Transformons la RDC par le code et l'innovation numérique.</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg transition transform hover:-translate-y-1">Nos Formations</a>
+                    <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-xl font-bold transition">Me Contacter</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-amber-400 rounded-3xl blur opacity-30 animate-pulse"></div>
+                    <img src="photo.jpg" alt="Bertin Gundimba" class="relative w-72 h-96 object-cover rounded-3xl border-4 border-white shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white shadow-lg relative -mt-16 max-w-5xl mx-auto rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center">
+        <div>
+            <p class="text-4xl font-bold text-blue-600 counter" data-target="150">0</p>
+            <p class="text-slate-500 font-medium">Étudiants formés</p>
+        </div>
+        <div>
+            <p class="text-4xl font-bold text-blue-600 counter" data-target="12">0</p>
+            <p class="text-slate-500 font-medium">Logiciels déployés</p>
+        </div>
+        <div>
+            <p class="text-4xl font-bold text-blue-600 counter" data-target="5">0</p>
+            <p class="text-slate-500 font-medium">Langages maîtrisés</p>
+        </div>
+        <div>
+            <p class="text-4xl font-bold text-blue-600 counter" data-target="100">0</p>
+            <p class="text-slate-500 font-medium">% Passion</p>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Smart Info RDC</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto italic">"L'informatique intelligente au service du développement du Sud-Ubangi."</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-blue-600 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800">Centre de Formation</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Bureautique Pro</h4>
+                                <p class="text-sm text-slate-600">Excel avancé, Word professionnel et gestion administrative numérique.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Programmation Junior</h4>
+                                <p class="text-sm text-slate-600">Cours de Python et logique algorithmique pour les jeunes de Gemena.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Maintenance & Réseaux</h4>
+                                <p class="text-sm text-slate-600">Installation de systèmes et dépannage technique certifié.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900 p-10 rounded-3xl shadow-xl border-t-8 border-amber-500 card-hover text-white">
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-3xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Ingénierie Logicielle</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-terminal text-amber-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Logiciels de Gestion (ERP)</h4>
+                                <p class="text-sm text-slate-400">Solutions sur mesure pour la gestion des stocks, des ventes et des finances.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-terminal text-amber-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Systèmes Scolaires</h4>
+                                <p class="text-sm text-slate-400">Automatisation des bulletins, inscriptions et paiements pour les écoles.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-terminal text-amber-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold">Applications Web & Vitrines</h4>
+                                <p class="text-sm text-slate-400">Présence digitale optimisée pour les entreprises et personnalités.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="histoire" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-center text-4xl font-bold mb-20 text-blue-900 italic underline decoration-amber-400 underline-offset-8">Mon Parcours : Kisangani - Gemena</h2>
+            
+            <div class="relative timeline-container">
+                <div class="mb-16 flex flex-col md:flex-row items-center w-full">
+                    <div class="hidden md:block w-1/2 pr-12 text-right">
+                        <span class="text-2xl font-bold text-blue-600">Août 2004</span>
+                    </div>
+                    <div class="z-10 bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center ring-8 ring-blue-50 shadow-lg mb-6 md:mb-0">
+                        <i class="fas fa-star text-white"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border-l-4 border-blue-600">
+                            <h3 class="text-xl font-bold text-slate-800">Naissance à Kisangani</h3>
+                            <p class="text-slate-600 mt-2">Début de mon voyage dans la capitale de la province de la Tshopo, berceau de ma curiosité intellectuelle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 flex flex-col md:flex-row-reverse items-center w-full">
+                    <div class="hidden md:block w-1/2 pl-12">
+                        <span class="text-2xl font-bold text-blue-600">Base Scolaire</span>
+                    </div>
+                    <div class="z-10 bg-amber-500 w-12 h-12 rounded-full flex items-center justify-center ring-8 ring-amber-50 shadow-lg mb-6 md:mb-0">
+                        <i class="fas fa-book-reader text-white"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pr-12 text-right">
+                        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
+                            <h3 class="text-xl font-bold text-slate-800">EP. BOYADEMELE/SAZA</h3>
+                            <p class="text-slate-600 mt-2">Mes premiers pas académiques à Gemena, où j'ai appris que la discipline est la clé du succès.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 flex flex-col md:flex-row items-center w-full">
+                    <div class="hidden md:block w-1/2 pr-12 text-right">
+                        <span class="text-2xl font-bold text-blue-600">Humanités</span>
+                    </div>
+                    <div class="z-10 bg-slate-900 w-12 h-12 rounded-full flex items-center justify-center ring-8 ring-slate-200 shadow-lg mb-6 md:mb-0">
+                        <i class="fas fa-user-shield text-white"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border-l-4 border-slate-900">
+                            <h3 class="text-xl font-bold text-slate-800">C.S. LES SOUVERAINS</h3>
+                            <p class="text-slate-600 mt-2">Diplôme d'État en Technique Sociale. Cette formation a forgé mon désir d'aider ma communauté via la technologie.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center w-full">
+                    <div class="hidden md:block w-1/2 pl-12 animate-pulse">
+                        <span class="text-2xl font-bold text-blue-600 uppercase">En cours</span>
+                    </div>
+                    <div class="z-10 bg-green-500 w-12 h-12 rounded-full flex items-center justify-center ring-8 ring-green-50 shadow-lg mb-6 md:mb-0">
+                        <i class="fas fa-laptop-code text-white"></i>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pr-12 text-right">
+                        <div class="bg-blue-900 p-6 rounded-2xl shadow-xl text-white transform hover:scale-105 transition">
+                            <h3 class="text-xl font-bold text-blue-400 uppercase">Université CEPROMAD</h3>
+                            <p class="mt-2 text-blue-100">Spécialisation en <strong>Informatique de Gestion</strong>. Développement d'expertise en Java, Python et Bases de données SQL.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="famille" class="py-24 bg-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-slate-900">Héritage & Valeurs</h2>
+                    <p class="text-blue-600 font-bold tracking-widest uppercase mt-2">La lignée Gundimba</p>
+                </div>
+                <div class="md:w-1/2 text-slate-500 italic md:text-right mt-4 md:mt-0">
+                    "On sait où l'on va quand on sait d'où l'on vient."
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-[2rem] shadow-2xl">
+                        <img src="photo-pere.jpg" alt="Monulphe Gundimba" class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-0 p-10 text-white">
+                            <h3 class="text-3xl font-bold">Monulphe Gundimba Tegundimba</h3>
+                            <p class="text-blue-300 font-semibold mb-4">Chef de famille & Mentor</p>
+                            <div class="grid grid-cols-2 gap-4 text-xs uppercase tracking-tighter opacity-80">
+                                <div><i class="fas fa-map-marker-alt mr-2"></i>Budjala / MBWA</div>
+                                <div><i class="fas fa-users mr-2"></i>Secteur MBWA-DJIMBA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-[2rem] shadow-2xl">
+                        <img src="photo_mere.jpg" alt="Yvonne Baonga" class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-0 p-10 text-white">
+                            <h3 class="text-3xl font-bold">Yvonne Baonga Fatuma</h3>
+                            <p class="text-pink-300 font-semibold mb-4">La Source de Sagesse</p>
+                            <p class="italic text-sm text-pink-100 leading-relaxed">"Une mère est le premier pilier de l'éducation et la force silencieuse derrière chaque grand homme."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-4xl font-bold mb-16">Stack Technique & Projets</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+                <div class="p-8 bg-slate-800 rounded-2xl text-center border border-slate-700 hover:border-blue-500 transition">
+                    <i class="fab fa-python text-5xl text-yellow-500 mb-4"></i>
+                    <h4 class="font-bold">Python</h4>
+                    <p class="text-xs text-slate-400 mt-2">Automatisation & IA</p>
+                </div>
+                <div class="p-8 bg-slate-800 rounded-2xl text-center border border-slate-700 hover:border-red-500 transition">
+                    <i class="fab fa-java text-5xl text-red-500 mb-4"></i>
+                    <h4 class="font-bold">Java</h4>
+                    <p class="text-xs text-slate-400 mt-2">Logiciels de Gestion</p>
+                </div>
+                <div class="p-8 bg-slate-800 rounded-2xl text-center border border-slate-700 hover:border-blue-400 transition">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+                    <h4 class="font-bold">Web Stack</h4>
+                    <p class="text-xs text-slate-400 mt-2">HTML5 / Tailwind / JS</p>
+                </div>
+                <div class="p-8 bg-slate-800 rounded-2xl text-center border border-slate-700 hover:border-green-500 transition">
+                    <i class="fas fa-database text-5xl text-green-500 mb-4"></i>
+                    <h4 class="font-bold">SQL</h4>
+                    <p class="text-xs text-slate-400 mt-2">Architecture de Données</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-600 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold mb-6">Projet Phare : "Smart Gestion Gemena"</h3>
+                    <p class="text-blue-100 mb-8 leading-relaxed">Un système complet développé en Java pour aider les boutiques locales à gérer leurs stocks en temps réel sans connexion internet permanente.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li><i class="fas fa-check-double mr-2"></i> Facturation automatique</li>
+                        <li><i class="fas fa-check-double mr-2"></i> Alertes stock critique par SMS</li>
+                        <li><i class="fas fa-check-double mr-2"></i> Rapports financiers mensuels</li>
+                    </ul>
+                    <a href="#contact" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition">Demander une démo</a>
+                </div>
+                <div class="md:w-1/2 bg-slate-800 rounded-2xl p-4 shadow-2xl border-4 border-blue-400">
+                    <div class="flex space-x-2 mb-4">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <code class="code-font text-blue-300 text-sm">
+                        <span class="text-pink-400">public class</span> SmartGestion { <br>
+                        &nbsp;&nbsp;<span class="text-pink-400">public static void</span> main(String[] args) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="text-yellow-200">"Système prêt !"</span>); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-slate-500">// Logique de gestion de stock...</span> <br>
+                        &nbsp;&nbsp;} <br>
+                        }
+                    </code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-slate-900 mb-8 uppercase tracking-widest">Collaborons ensemble</h2>
+            <p class="text-slate-600 mb-12">Basé à Gemena, je suis disponible pour des projets de développement, des formations ou des conseils en transformation numérique.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <a href="https://wa.me/243815089614" class="group">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-sm">WhatsApp</span>
+                </a>
+                <a href="mailto:bertingundimba@gmail.com" class="group">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-sm">Email</span>
+                </a>
+                <a href="https://www.facebook.com/bertin.gundimba.konzi.2025" class="group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-700 group-hover:text-white transition">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-sm">Facebook</span>
+                </a>
+                <a href="https://www.tiktok.com/@bertingundimba" class="group">
+                    <div class="w-16 h-16 bg-slate-100 text-slate-900 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-900 group-hover:text-white transition">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-sm">TikTok</span>
+                </a>
+            </div>
+
+            <div class="inline-block p-1 px-4 bg-slate-100 rounded-full text-slate-500 text-xs font-mono">
+                Gemena, Sud-Ubangi, République Démocratique du Congo
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <p class="font-bold text-xl">Bertin Gundimba Konzi</p>
+                <p class="text-slate-400 text-sm">© 2026 Smart Info RDC. Tous droits réservés.</p>
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-white transition italic">Innovation</a>
+                <a href="#" class="hover:text-white transition italic">Éducation</a>
+                <a href="#" class="hover:text-white transition italic">Technologie</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // Animation des compteurs
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Intersection Observer pour les animations au scroll
+        const observerOptions = { threshold: 0.2 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if(entry.target.classList.contains('counter-section')) animateCounters();
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+        // Smooth Scroll pour tous les liens
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
