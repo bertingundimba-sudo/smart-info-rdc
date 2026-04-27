@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription Multi-Étapes - Smart Info RDC</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(135deg,#e0f2fe,#fef3c7);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    user-select: none;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffffcc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #1e40af;
+    margin-bottom: 15px;
+  }
+
+  p {
+    text-align: center;
+    color: #334155;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .step {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeIn 0.5s ease forwards;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .step.active {
+    display: flex;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input, select, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59,130,246,0.3);
+    outline: none;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  }
+
+  button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+  }
+
+  .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .progress-bar div {
+    width: 32%;
+    height: 5px;
+    background: #cbd5e1;
+    border-radius: 3px;
+    transition: background 0.3s;
+  }
+
+  .progress-bar div.active {
+    background: #3b82f6;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Inscription Rapide - Smart Info RDC</h2>
+  <p>Remplissez les étapes pour finaliser votre inscription et soyez redirigé vers WhatsApp.</p>
+
+  <div class="progress-bar">
+    <div class="step-progress active"></div>
+    <div class="step-progress"></div>
+    <div class="step-progress"></div>
+  </div>
+
+  <form id="multiStepForm" action="Inscription_valide.php" method="post">
+    <div class="step active">
+      <label for="nom">Nom <i class="ri-user-line"></i></label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      
+      <label for="postnom">Postnom</label>
+      <input type="text" id="postnom" name="postnom" placeholder="Votre postnom" required>
+
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+      
+      <label for="password">Votre mot de passe</label>
+      <input type="password" step="6" id="password" name="password" placeholder="Mot de passe" required>
+
+      <label for="confirmPassword">Confirmer votre mot de passe</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmer mot de passe" required>
+
+      <div class="buttons">
+        <span></span>
+        <button type="button" id="next1">Suivant →</button>
+      </div>
+    </div>
+
+    <div class="step">
+      <label for="sexe">Sexe</label>
+      <select id="sexe" name="sexe" required>
+        <option value="">Sélectionner</option>
+        <option value="Masculin">Masculin</option>
+        <option value="Féminin">Féminin</option>
+        <option value="Autre">Autre</option>
+      </select>
+
+      <label for="formation">Type de Formation</label>
+      <select id="formation" name="formation" required>
+        <option value="">Choisir une formation</option>
+        <option value="Développement Web & Mobile">Développement Web & Mobile</option>
+        <option value="Base de Données & Big Data">Base de Données & Big Data</option>
+        <option value="Cybersécurité">Cybersécurité</option>
+        <option value="Maintenance Informatique">Maintenance Informatique</option>
+        <option value="Bureautique Avancée">Bureautique Avancée</option>
+        <option value="Accompagner un Projet Informatique">Accompagner un Projet Informatique</option>
+        <option value="Les Langages de Programmation">Les Langages de Programmation</option>
+      </select>
+
+      <div class="buttons">
+        <button type="button" id="prev2">← Précédent</button>
+        <button type="button" id="next2">Suivant →</button>
+      </div>
+    </div>
+
+    <div class="step">
+      <label for="raison">Raison de la formation</label>
+      <textarea id="raison" name="raison" placeholder="Pourquoi souhaitez-vous suivre cette formation ?" required></textarea>
+
+      <div class="buttons">
+        <button type="button" id="prev3">← Précédent</button>
+        <button type="submit">Envoyer</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  const steps = document.querySelectorAll('.step');
+  const progress = document.querySelectorAll('.step-progress');
+  let currentStep = 0;
+
+  const showStep = (n) => {
+    steps.forEach((s, i) => {
+      s.classList.toggle('active', i === n);
+      progress[i].classList.toggle('active', i <= n);
+    });
+  }
+
+  document.getElementById('next1').addEventListener('click', () => {
+    const nom = document.getElementById('nom').value;
+    const postnom = document.getElementById('postnom').value;
+    const prenom = document.getElementById('prenom').value;
+    const pass = document.getElementById('password').value;
+    const confirm = document.getElementById('confirmPassword').value;
+
+    if(nom && postnom && prenom && pass && confirm) {
+      if(pass !== confirm) {
+        alert("Les mots de passe ne correspondent pas !");
+      } else {
+        currentStep = 1;
+        showStep(currentStep);
+      }
+    } else {
+      alert("Bonjour, Veuillez remplir tous les champs !");
+    }
+  });
+
+  document.getElementById('next2').addEventListener('click', () => {
+    if(document.getElementById('sexe').value && document.getElementById('formation').value){
+      currentStep = 2;
+      showStep(currentStep);
+    } else {
+      alert("Bonjour, Veuillez remplir tous les champs !");
+    }
+  });
+
+  document.getElementById('prev2').addEventListener('click', () => { currentStep = 0; showStep(currentStep); });
+  document.getElementById('prev3').addEventListener('click', () => { currentStep = 1; showStep(currentStep); });
+
+  document.getElementById('multiStepForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const postnom = document.getElementById('postnom').value.trim();
+    const prenom = document.getElementById('prenom').value.trim();
+    const sexe = document.getElementById('sexe').value;
+    const formation = document.getElementById('formation').value;
+    const raison = document.getElementById('raison').value.trim();
+
+    const message = `Bonjour Smart Info RDC, je souhaite m'inscrire à une formation.
+*Nom :* ${nom}
+*Postnom :* ${postnom}
+*Prénom :* ${prenom}
+*Sexe :* ${sexe}
+*Formation :* ${formation}
+*Raison :* ${raison}`;
+
+    const whatsappUrl = `https://wa.me/243815089614?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  });
+</script>
+
+</body>
+</html>
