@@ -92,6 +92,39 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+
+
+        div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #000;
+  width: 200px;
+  border-radius: 5px 5px;
+}
+
+div.gallery-item:hover {
+  border: 2px solid #5E35B1;
+
+}
+
+div.gallery-item img {
+  width: 100%;
+  height:190px;
+  border-radius: 6px 6px;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px 5px;
+  margin: 5px;
+  border: 1px solid #000;
+}
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -412,6 +445,37 @@
             </div>
         </div>
     </section>
+<div class="gallery">
+
+<div class="gallery-item">
+  <a target="_blank" href="photo.jpg">
+    <img src="photo.jpg" alt="Cinque Terre" width="300" height="300">
+  </a>
+  <div class="desc">BERTIN GUNDIMBA KONZI</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="photo2.jpg">
+    <img src="photo2.jpg" alt="Forest" width="300" height="300">
+  </a>
+  <div class="desc">Green Forest</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="photo.jpg">
+    <img src="photo.jpg" alt="Northern Lights" width="300" height="300">
+  </a>
+  <div class="desc">Northern Lights</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="photo.jpg">
+    <img src="photo.jpg" alt="Mountains" width="300" height="300">
+  </a>
+  <div class="desc">Mountains</div>
+</div>
+
+</div>
 
     <section id="contact" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
