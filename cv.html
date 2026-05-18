@@ -6,71 +6,239 @@
     <title>Bertin Gundimba Konzi | Smart Info RDC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .gradient-blue { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-800">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="20" fill="#1e40af"/><path d="M30 50L45 65L70 35" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>
-                <span class="text-xl font-bold text-blue-900">SMART INFO RDC</span>
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+                    <rect width="100" height="100" rx="20" fill="#1e40af"/>
+                    <path d="M30 50L45 65L70 35" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <span class="text-xl font-bold text-blue-900 tracking-wide">SMART INFO RDC</span>
             </div>
             <div class="hidden md:flex space-x-6 items-center">
-                <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="cv.html" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-bold hover:bg-blue-200 transition">Voir mon CV</a>
-                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">Contact</a>
+                <a href="#services" class="hover:text-blue-600 font-medium transition">Services</a>
+                <a href="#cv" class="hover:text-blue-600 font-medium transition">Mon CV</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-xl font-bold hover:bg-blue-700 transition shadow-md">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 gradient-blue text-white">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-2/3 text-center md:text-left">
-                <h1 class="text-5xl font-bold mb-4">Bertin Gundimba Konzi</h1>
-                <p class="text-xl opacity-90 mb-8">Informatique de Gestion | Fondateur de Smart Info RDC</p>
-                <div class="flex gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="bg-amber-500 px-6 py-3 rounded-xl font-bold">Me confier un projet</a>
-                    <a href="cv.html" class="border border-white px-6 py-3 rounded-xl">Mon CV (PDF)</a>
+    <section class="pt-40 pb-24 gradient-blue text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-2/3 text-center md:text-left space-y-6">
+                <span class="bg-amber-500 text-slate-950 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Disponible immédiatement</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Bertin Gundimba Konzi</h1>
+                <p class="text-xl md:text-2xl opacity-90 font-light max-w-xl">
+                    Étudiant en <span class="font-semibold text-amber-400">Informatique de Gestion</span> & Fondateur de Smart Info RDC
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                    <a href="#contact" class="bg-amber-500 text-slate-950 px-8 py-3.5 rounded-xl font-bold hover:bg-amber-400 transition shadow-lg">Me confier un projet</a>
+                    <a href="#cv" class="border-2 border-white/40 bg-white/10 backdrop-blur px-8 py-3.5 rounded-xl font-bold hover:bg-white/20 transition">Consulter mon CV</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
+    <section id="services" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900">Nos Services</h2>
+            <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full mt-3"></div>
+        </div>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
-                <h3 class="text-xl font-bold mb-4"><i class="fas fa-graduation-cap mr-2"></i> Formations</h3>
-                <p class="text-slate-600">Bureautique, Initiation Python et Maintenance informatique à Gemena.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-blue-600 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 text-blue-600 text-xl"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="text-xl font-bold mb-2 text-slate-800">Formations</h3>
+                <p class="text-slate-600">Bureautique avancée, Initiation Python, Développement Web et Maintenance informatique à Gemena.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-amber-500">
-                <h3 class="text-xl font-bold mb-4"><i class="fas fa-code mr-2"></i> Logiciels</h3>
-                <p class="text-slate-600">Développement d'applications de gestion de stock et systèmes scolaires.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-amber-500 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 text-amber-600 text-xl"><i class="fas fa-code"></i></div>
+                <h3 class="text-xl font-bold mb-2 text-slate-800">Logiciels</h3>
+                <p class="text-slate-600">Développement d'applications de gestion de stock, systèmes de suivi scolaire et solutions sur mesure.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-slate-100">
+    <section id="cv" class="py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Curriculum Vitæ</h2>
+                <p class="text-slate-500 text-sm mt-1">Parcours académique, compétences et objectifs professionnels</p>
+                <div class="w-12 h-1 bg-blue-600 mx-auto rounded-full mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <div class="space-y-6 lg:col-span-1">
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 border-b pb-3 mb-4"><i class="fas fa-user text-blue-600 mr-2"></i>Profil Personnel</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span class="text-slate-500">Nom complet :</span> <span class="font-medium text-slate-800">GUNDIMBA KONZI Bertin</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">Né à :</span> <span class="font-medium text-slate-800">Kisangani (03/08/2004)</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">Nationalité :</span> <span class="font-medium text-slate-800">Congolais</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">État civil :</span> <span class="font-medium text-slate-800">Célibataire</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500">Adresse :</span> <span class="font-medium text-slate-800 text-right">Bokonzo, Gemena</span></li>
+                        </ul>
+                        
+                        <div class="mt-6 pt-4 border-t space-y-2.5">
+                            <a href="tel:+243815089614" class="flex items-center text-sm text-slate-600 hover:text-blue-600 transition"><i class="fas fa-phone w-6 text-blue-500"></i> +243 815 089 614</a>
+                            <a href="https://wa.me/243815089614" target="_blank" class="flex items-center text-sm text-slate-600 hover:text-green-600 transition"><i class="fab fa-whatsapp w-6 text-green-500"></i> WhatsApp</a>
+                            <a href="mailto:bertingundimba@gmail.com" class="flex items-center text-sm text-slate-600 hover:text-blue-600 transition"><i class="fas fa-envelope w-6 text-blue-500"></i> bertingundimba@gmail.com</a>
+                            <a href="https://github.com/BertinGundimba" target="_blank" class="flex items-center text-sm text-slate-600 hover:text-slate-900 transition"><i class="fab fa-github w-6 text-slate-800"></i> GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 border-b pb-3 mb-4"><i class="fas fa-laptop text-blue-600 mr-2"></i>Compétences</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-1.5">Langages & Web</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-slate-100 text-slate-800 px-2.5 py-1 rounded-md text-xs font-medium">Python</span>
+                                    <span class="bg-slate-100 text-slate-800 px-2.5 py-1 rounded-md text-xs font-medium">Java</span>
+                                    <span class="bg-slate-100 text-slate-800 px-2.5 py-1 rounded-md text-xs font-medium">HTML5 / CSS3</span>
+                                    <span class="bg-slate-100 text-slate-800 px-2.5 py-1 rounded-md text-xs font-medium">JavaScript</span>
+                                    <span class="bg-slate-100 text-slate-800 px-2.5 py-1 rounded-md text-xs font-medium">PHP & MySQL</span>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-1.5">Outils & Métier</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md text-xs font-medium">Git / GitHub</span>
+                                    <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md text-xs font-medium">VS Code</span>
+                                    <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md text-xs font-medium">Microsoft Office</span>
+                                    <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md text-xs font-medium">Maintenance Logicielle</span>
+                                    <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded-md text-xs font-medium">Gestion de Projets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 border-b pb-3 mb-4"><i class="fas fa-globe text-blue-600 mr-2"></i>Langues & Qualités</h3>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between items-center text-sm"><span class="text-slate-600">Lingala</span> <span class="text-xs font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded">Maternelle</span></div>
+                            <div class="flex justify-between items-center text-sm"><span class="text-slate-600">Français</span> <span class="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Excellent</span></div>
+                            <div class="flex justify-between items-center text-sm"><span class="text-slate-600">Swahili</span> <span class="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Excellent</span></div>
+                            <div class="flex justify-between items-center text-sm"><span class="text-slate-600">Anglais</span> <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Débutant</span></div>
+                        </div>
+                        <div class="border-t pt-3 flex flex-wrap gap-1.5">
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Rigueur</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Autonomie</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Esprit d'équipe</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">Innovation</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="space-y-6 lg:col-span-2">
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Profil Professionnel & Objectif</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Étudiant en informatique de gestion à l'Université CEPROMAD, passionné par le développement logiciel et les technologies web. J'ai acquis une expérience concrète dans la création de sites web et d'applications locales. Motivé par l'innovation et la transformation digitale en RDC, mon objectif est de concevoir des solutions numériques intelligentes et impactantes pour notre société.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 mb-6"><i class="fas fa-university text-blue-600 mr-2"></i>Cursus Académique</h3>
+                        <div class="space-y-6 border-l-2 border-slate-200 pl-4 ml-2">
+                            <div class="relative">
+                                <div class="absolute -left-[22px] top-1 w-3 h-3 bg-blue-600 rounded-full"></div>
+                                <span class="text-xs font-bold text-blue-600">2024 – Présent</span>
+                                <h4 class="font-bold text-slate-900 text-sm">Licence en Informatique de Gestion</h4>
+                                <p class="text-xs text-slate-500">Université CEPROMAD — Gemena, système LMD</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[22px] top-1 w-3 h-3 bg-slate-300 rounded-full"></div>
+                                <span class="text-xs font-bold text-slate-500">2017 – 2024</span>
+                                <h4 class="font-bold text-slate-900 text-sm">Diplôme d'État — Option Technique Sociale</h4>
+                                <p class="text-xs text-slate-500">Complexe Scolaire Le Souverain</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-4 border-t">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-2">Formations Complémentaires :</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded font-medium">Sécurité Informatique</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded font-medium">Développement de Logiciels</span>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded font-medium">Gestion de projets informatiques (PMP)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 mb-6"><i class="fas fa-folder-open text-blue-600 mr-2"></i>Projets Réalisés</h3>
+                        <div class="space-y-6">
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-slate-900 text-base flex justify-between items-center">
+                                    <span>Smart Info RDC – Plateforme Web</span>
+                                    <span class="text-xs font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">En production</span>
+                                </h4>
+                                <p class="text-xs text-slate-600 mt-2">Développement complet d'un portail web éducatif dédié à la formation et à la vulgarisation informatique en RDC.</p>
+                                <p class="text-xs text-blue-600 font-medium mt-2">Technologies : HTML5, CSS3, JavaScript, PHP, MySQL</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <h4 class="font-bold text-slate-900 text-base flex justify-between items-center">
+                                    <span>Application Locale de Gestion des Formations</span>
+                                    <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">Logiciel Desktop</span>
+                                </h4>
+                                <p class="text-xs text-slate-600 mt-2">Conception d'un programme d'administration permettant de gérer le suivi pédagogique complet, l'enregistrement et le stockage local des données des apprenants.</p>
+                                <p class="text-xs text-blue-600 font-medium mt-2">Technologies : Python, Stockage de données local</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/60">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4"><i class="fas fa-bookmark text-blue-600 mr-2"></i>Références Professionnelles</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/50">
+                                <p class="font-bold text-slate-800 text-sm">Prof. José Tegbesa Movunda</p>
+                                <p class="text-xs text-slate-500 mb-2">Enseignant, Université de Gemena</p>
+                                <a href="tel:+243813550017" class="text-xs text-blue-600 font-medium hover:underline"><i class="fas fa-phone mr-1"></i> +243 813 550 017</a>
+                            </div>
+                            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/50">
+                                <p class="font-bold text-slate-800 text-sm">Assistant Jacques Bokungu Boboy</p>
+                                <p class="text-xs text-slate-500 mb-2">Enseignant, Université du CEPROMAD</p>
+                                <a href="tel:+243820050090" class="text-xs text-blue-600 font-medium hover:underline"><i class="fas fa-phone mr-1"></i> +243 820 050 090</a>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-right text-slate-400 mt-6 italic">Fait à Gemena, le 13 mars 2026</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-50">
         <div class="max-w-3xl mx-auto px-6">
-            <div class="bg-white p-8 rounded-3xl shadow-xl">
-                <h2 class="text-2xl font-bold mb-6 text-center">Envoyez-moi un message</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                <h2 class="text-2xl font-bold mb-2 text-center text-slate-900">Envoyez-moi un message</h2>
+                <p class="text-slate-500 text-center text-sm mb-6">Une question ou une proposition de projet ? Écrivez-moi directement.</p>
                 <form action="https://formspree.io/f/votre_id_formspree" method="POST" class="space-y-4">
-                    <input type="text" name="name" placeholder="Nom complet" required class="w-full p-3 rounded-lg border">
-                    <input type="email" name="email" placeholder="Votre Email" required class="w-full p-3 rounded-lg border">
-                    <textarea name="message" placeholder="Votre message..." rows="4" required class="w-full p-3 rounded-lg border"></textarea>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
+                    <input type="text" name="name" placeholder="Nom complet" required class="w-full p-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 text-sm transition">
+                    <input type="email" name="email" placeholder="Votre Email" required class="w-full p-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 text-sm transition">
+                    <textarea name="message" placeholder="Votre message..." rows="4" required class="w-full p-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 text-sm transition"></textarea>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition shadow-md">Envoyer le message</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-slate-500 text-sm">
-        © 2026 Bertin Gundimba Konzi - Smart Info RDC
+    <footer class="py-8 text-center text-slate-500 text-xs border-t border-slate-200 bg-white">
+        © 2026 Bertin Gundimba Konzi - Smart Info RDC • Tous droits réservés.
     </footer>
 
 </body>
