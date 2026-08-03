@@ -1,0 +1,1041 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Cepromad</title>
+
+  <link rel="icon" type="image/png" href="img/general/logo.jpeg">
+</head>
+
+<body class="preloader-visible" data-barba="wrapper">
+  <!-- preloader start -->
+  <div class="preloader js-preloader">
+    <div class="preloader__bg"></div>
+  </div>
+  <!-- preloader end -->
+
+
+  <main class="main-content  ">
+
+     <style>
+     .header .explore-content {
+         height: 50vh;
+     }
+
+     .explore__item a {
+         text-transform: capitalize;
+     }
+
+     .header__logo a {
+         color: white !important;
+     }
+ </style>
+
+  <header data-anim="fade" data-add-bg="bg-dark-1" class="header -type-1 js-header">
+
+
+     <div class="header__container">
+         <div class="row justify-between items-center">
+
+             <div class="col-auto">
+                 <div class="header-left">
+
+                     <div class="header__logo">
+                         <a data-barba href="./">
+                             <img src="img/general/logo.png" alt="logo">
+                             CEPROMAD
+                         </a>
+                     </div>
+
+
+                     <div class="header__explore text-green-1 ml-60 xl:ml-30 xl:d-none">
+                         <a href="#" class="d-flex items-center" data-el-toggle=".js-explore-toggle">
+                             <i class="icon icon-explore mr-15"></i>
+                             Explorer
+                         </a>
+
+                         
+                         <div class="explore-content py-25 rounded-8 bg-white toggle-element js-explore-toggle">
+                                                              <div class="explore__item">
+                                     <a href="#" class="d-flex items-center justify-between text-dark-1">
+                                         Domaine de  sciences agronomiques et environnement                                         <div class="icon-chevron-right text-11"></div>
+                                     </a>
+                                     <div class="explore__subnav rounded-8">
+                                         <a class="text-dark-1" href="#">Développement Rural</a>                                     </div>
+                                 </div>
+                                                              <div class="explore__item">
+                                     <a href="#" class="d-flex items-center justify-between text-dark-1">
+                                         Domaine de sciences économiques et de gestion                                         <div class="icon-chevron-right text-11"></div>
+                                     </a>
+                                     <div class="explore__subnav rounded-8">
+                                         <a class="text-dark-1" href="#">Comptabilité et Finance (GEFICO)</a><a class="text-dark-1" href="#">Fiscalité, Douanes et Accises</a><a class="text-dark-1" href="#">Gestion des Ressources Humaines</a><a class="text-dark-1" href="#">Management Général</a><a class="text-dark-1" href="#">Management Minier</a>                                     </div>
+                                 </div>
+                                                              <div class="explore__item">
+                                     <a href="#" class="d-flex items-center justify-between text-dark-1">
+                                         Domaine de sciences juridique, politique et administrative                                         <div class="icon-chevron-right text-11"></div>
+                                     </a>
+                                     <div class="explore__subnav rounded-8">
+                                         <a class="text-dark-1" href="#">Droit</a><a class="text-dark-1" href="#">Sciences Politiques</a>                                     </div>
+                                 </div>
+                                                              <div class="explore__item">
+                                     <a href="#" class="d-flex items-center justify-between text-dark-1">
+                                         Domaines de sciences et technologies                                         <div class="icon-chevron-right text-11"></div>
+                                     </a>
+                                     <div class="explore__subnav rounded-8">
+                                         <a class="text-dark-1" href="#">Génie Logiciel (Gestion)</a><a class="text-dark-1" href="#">Systèmes Informatiques (réseaux et télécoms)</a>                                     </div>
+                                 </div>
+                             
+                             <div class="explore__item">
+                                 <a href="login" class="text-purple-1 underline">Voir plus</a>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+
+
+             <div class="header-menu js-mobile-menu-toggle ">
+                 <div class="header-menu__content">
+                     <div class="mobile-bg js-mobile-bg"></div>
+
+                     <div class="d-none xl:d-flex items-center px-20 py-20 border-bottom-light">
+                                                      <a href="./login" class="text-dark-1">Connexion</a>
+                             <!-- <a href="./register" class="text-dark-1 ml-30">Inscription</a> -->
+                         
+                     </div>
+
+                     <div class="menu js-navList">
+                         <ul class="menu__nav text-white -is-active">
+                             <li class="">
+                                 <a data-barba href="./">
+                                     Home
+                                 </a>
+                             </li>
+
+                             <li class="">
+                                 <a data-barba href="./event">Evenements</a>
+                             </li>
+
+                             <li class="">
+                                 <a data-barba href="./news">News</a>
+                             </li>
+
+                             <li>
+                                 <a data-barba href="./about">
+                                     Apropos
+                                 </a>
+                             </li>
+
+                             <li>
+                                 <a data-barba href="./contact">Contact</a>
+                             </li>
+                         </ul>
+                     </div>
+
+                     <div class="mobile-footer px-20 py-20 border-top-light js-mobile-footer">
+                         <div class="mobile-footer__number">
+                             <div class="text-17 fw-500 text-dark-1">Appelez-nous</div>
+                             <div class="text-17 fw-500 text-purple-1">+243975 883 809</div>
+                         </div>
+
+                         <div class="lh-2 mt-10">
+                             <div>01 Av. de l’Eglise Quartier Biashara,<br> Commune de Dilala, ville de Kolwezi.</div>
+                             <div>info@cepromad.com / universitcepromad088@gmail.com</div>
+                         </div>
+
+                         <div class="mobile-socials mt-10">
+
+                             <a href="https://web.facebook.com/61552647873442/" class="d-flex items-center justify-center rounded-full size-40" target="_blank">
+                                 <i class="fa fa-facebook"></i>
+                             </a>
+
+                             <!-- <a href="#" class="d-flex items-center justify-center rounded-full size-40" target="_blank">
+                                 <i class="fa fa-twitter"></i>
+                             </a> -->
+
+                             <a href="https://www.instagram.com/universite_du_cepromad_kolwezi/?hl=en" class="d-flex items-center justify-center rounded-full size-40" target="_blank">
+                                 <i class="fa fa-instagram"></i>
+                             </a>
+
+                             <!-- <a href="#" class="d-flex items-center justify-center rounded-full size-40" target="_blank">
+                                 <i class="fa fa-linkedin"></i>
+                             </a> -->
+
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="header-menu-close" data-el-toggle=".js-mobile-menu-toggle">
+                     <div class="size-40 d-flex items-center justify-center rounded-full bg-white">
+                         <div class="icon-close text-dark-1 text-16"></div>
+                     </div>
+                 </div>
+
+                 <div class="header-menu-bg"></div>
+             </div>
+
+
+             <div class="col-auto">
+                 <div class="header-right d-flex items-center">
+                     <div class="header-right__icons text-white d-flex items-center">
+
+
+
+                         <div class="d-none xl:d-block ml-20">
+                             <button class="text-white items-center" data-el-toggle=".js-mobile-menu-toggle">
+                                 <i class="text-11 icon icon-mobile-menu"></i>
+                             </button>
+                         </div>
+
+                     </div>
+
+                     <div class="header-right__buttons d-flex items-center ml-30 md:d-none">
+                                                      <a href="./login" class="button -sm -white text-dark-1 ml-30">Connexion</a>
+                             <!-- <a href="./register" class="button -sm -white text-dark-1 ml-30"> Inscription</a> -->
+                                              </div>
+                 </div>
+             </div>
+
+         </div>
+     </div>
+ </header>
+
+    <div class="content-wrapper  js-content-wrapper">
+
+      <section class="masthead -type-1 js-mouse-move-container">
+        <div class="masthead__bg">
+          <img src="img/home-1/hero/bg.png" alt="image">
+        </div>
+        <div class="container">
+          <div data-anim-wrap class="row y-gap-30 justify-between items-end">
+            <div class="col-xl-6 col-lg-6 col-sm-10">
+              <div class="masthead__content">
+                <h1 data-anim-child="slide-up" class="masthead__title">
+                  ⁠Bienvenue à l'Université du CEPROMAD KOLWEZI
+                </h1>
+                <p data-anim-child="slide-up delay-1" class="masthead__text">
+                  Une institution d'enseignement supérieur et universitaire centrée sur la promotion du management et du développement à Kolwezi.
+                </p>
+                <div data-anim-child="slide-up delay-2" class="masthead__buttons row x-gap-10 y-gap-10">
+                  <div class="col-12 col-sm-auto">
+                    <a data-barba href="./login" class="button -md -purple-1 text-white">Connexion</a>
+                  </div>
+                  <div class="col-12 col-sm-auto">
+                    <a data-barba href="#faculty" class="button -md -outline-green-1 text-green-1">Nos Facultés</a>
+                  </div>
+                </div>
+                <div data-anim-child="slide-up delay-3" class="masthead-info row y-gap-15 sm:d-none">
+
+                  <div class="masthead-info__item d-flex items-center text-white">
+                    <div class="masthead-info__icon mr-10">
+                      <img src="img/masthead/icons/1.svg" alt="icon">
+                    </div>
+                    <div class="masthead-info__title lh-1">Centrée sur le développement régional</div>
+                  </div>
+
+                  <div class="masthead-info__item d-flex items-center text-white">
+                    <div class="masthead-info__icon mr-10">
+                      <img src="img/masthead/icons/2.svg" alt="icon">
+                    </div>
+                    <div class="masthead-info__title lh-1">Formations de qualité en management</div>
+                  </div>
+
+                  <div class="masthead-info__item d-flex items-center text-white">
+                    <div class="masthead-info__icon mr-10">
+                      <img src="img/masthead/icons/3.svg" alt="icon">
+                    </div>
+                    <div class="masthead-info__title lh-1">Un environnement d'apprentissage dynamique</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div data-anim-child="slide-up delay-5" class="col-xl-6 col-lg-6">
+              <div class="masthead-image">
+                <div class="masthead-image__el1">
+                  <img class="js-mouse-move" data-move="40" src="img/graduate/2.jpg" alt="image">
+
+                  <div data-move="30"
+                    class="lg:d-none img-el -w-250 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move">
+                    <div class="size-50 d-flex justify-center items-center bg-red-2 rounded-full">
+                      <img src="img/masthead/1.svg" alt="icon">
+                    </div>
+                    <div class="ml-20">
+                      <div class="text-orange-1 text-16 fw-500 lh-1">Campus Moderne</div>
+                      <div class="mt-3">Installations de pointe</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="masthead-image__el2">
+                  <img class="js-mouse-move" data-move="70" src="img/graduate/4.jpg" alt="image">
+
+                  <div data-move="60"
+                    class="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move">
+                    <img src="img/masthead/4.png" alt="icon">
+                    <div class="ml-20">
+                      <div class="text-dark-1 text-16 fw-500 lh-1">Professeurs Qualifiés</div>
+                      <div class="mt-3">Experts dans leurs domaines</div>
+                      <div class="d-flex x-gap-5 mt-3">
+                        <div>
+                          <div class="icon-star text-yellow-1 text-11"></div>
+                        </div>
+                        <div>
+                          <div class="icon-star text-yellow-1 text-11"></div>
+                        </div>
+                        <div>
+                          <div class="icon-star text-yellow-1 text-11"></div>
+                        </div>
+                        <div>
+                          <div class="icon-star text-yellow-1 text-11"></div>
+                        </div>
+                        <div>
+                          <div class="icon-star text-yellow-1 text-11"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="masthead-image__el3">
+                  <img class="js-mouse-move" data-move="40" src="img/graduate/3.jpg" alt="image">
+
+                  <div data-move="30"
+                    class="shadow-4 img-el -w-260 px-30 py-20 d-flex items-center bg-white rounded-8 js-mouse-move">
+                    <div class="img-el__side">
+                      <div class="size-50 d-flex justify-center items-center bg-purple-1 rounded-full">
+                        <img src="img/masthead/2.svg" alt="icon">
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="text-purple-1 text-16 fw-500 lh-1">Rejoignez-nous !</div>
+                      <div class="mt-3">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <svg class="svg-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="svg-waves__parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" />
+            <use xlink:href="#gentle-wave" x="48" y="3" />
+            <use xlink:href="#gentle-wave" x="48" y="5" />
+            <use xlink:href="#gentle-wave" x="48" y="7" />
+          </g>
+        </svg>
+      </section>
+
+
+      
+      <section class="layout-pt-md layout-pb-md" id="faculty">
+        <div data-anim-wrap class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionTitle">
+                <h2 class="sectionTitle__title">Nos Départements</h2>
+                <p class="sectionTitle__text">Découvrez nos différents départements académiques.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="overflow-hidden pt-50 js-section-slider" data-gap="30" data-loop data-pagination
+            data-slider-cols="xl-6 lg-4 md-2 sm-2">
+            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-2"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/1.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Comptabilité et Finance (GEFICO)</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-3"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/2.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Développement Rural</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-4"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/3.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Droit</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-5"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/4.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Fiscalité, Douanes et Accises</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-6"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/5.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Génie Logiciel (Gestion)</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-7"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/6.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Gestion des Ressources Humaines</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-8"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/1.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Management Général</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-9"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/2.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Management Minier</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-10"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/3.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Sciences Politiques</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                              <div class="swiper-slide">
+                  <div data-anim-child="slide-left delay-11"
+                    class="featureCard -type-1 -featureCard-hover">
+                    <div class="featureCard__content">
+                      <div class="featureCard__icon">
+                        <img src="img/featureCards/4.svg" alt="icon">
+                      </div>
+                      <div class="featureCard__title">Systèmes Informatiques (réseaux et télécoms)</div>
+                      <div class="featureCard__text">Découvrez nos programmes</div>
+                    </div>
+                  </div>
+                </div>
+                          </div>
+
+            <div class="d-flex justify-center x-gap-15 items-center pt-60 lg:pt-40">
+              <div class="col-auto">
+                <button class="d-flex items-center text-24 arrow-left-hover js-prev">
+                  <i class="icon icon-arrow-left"></i>
+                </button>
+              </div>
+              <div class="col-auto">
+                <div class="pagination -arrows js-pagination"></div>
+              </div>
+              <div class="col-auto">
+                <button class="d-flex items-center text-24 arrow-right-hover js-next">
+                  <i class="icon icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="layout-pt-lg layout-pb-lg bg-purple-1">
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionTitle">
+                <h2 class="sectionTitle__title text-green-1">Témoignages</h2>
+                <p class="sectionTitle__text text-white">Ce que nos étudiants et partenaires disent de nous.</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-anim-wrap class="js-section-slider pt-50" data-gap="30" data-pagination
+            data-slider-cols="base-3 xl-3 lg-2 md-2 sm-1">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div data-anim-child="slide-left delay-1" class="testimonials -type-1">
+                  <div class="testimonials__content">
+                    <h4 class="testimonials__title">Excellent Travail</h4>
+                    <p class="testimonials__text">
+                      "L'Université de Cepromad Lualaba offre une formation de qualité et un environnement
+                      d'apprentissage stimulant. Je recommande vivement cette institution."
+                    </p>
+                    <div class="testimonials-footer">
+                      <div class="testimonials-footer__image">
+                        <img src="img/testimonials/2.png" alt="image">
+                      </div>
+                      <div class="testimonials-footer__content">
+                        <div class="testimonials-footer__title">Jean Dupont</div>
+                        <div class="testimonials-footer__text">Étudiant en Gestion</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div data-anim-child="slide-left delay-2" class="testimonials -type-1">
+                  <div class="testimonials__content">
+                    <h4 class="testimonials__title">Partenariat Solide</h4>
+                    <p class="testimonials__text">
+                      "Nous sommes fiers de notre partenariat avec l'Université de Cepromad Lualaba.
+                      Leur engagement envers le développement régional est exemplaire."
+                    </p>
+                    <div class="testimonials-footer">
+                      <div class="testimonials-footer__image">
+                        <img src="img/testimonials/4.png" alt="image">
+                      </div>
+                      <div class="testimonials-footer__content">
+                        <div class="testimonials-footer__title">Marie Kabasele</div>
+                        <div class="testimonials-footer__text">Partenaire Industriel</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div data-anim-child="slide-left delay-3" class="testimonials -type-1">
+                  <div class="testimonials__content">
+                    <h4 class="testimonials__title">Professeurs Engagés</h4>
+                    <p class="testimonials__text">
+                      "Les professeurs de l'Université de Cepromad de la province de Lualaba sont non seulement compétents,
+                      mais aussi très engagés envers la réussite de leurs étudiants."
+                    </p>
+                    <div class="testimonials-footer">
+                      <div class="testimonials-footer__image">
+                        <img src="img/testimonials/1.jpeg" alt="image">
+                      </div>
+                      <div class="testimonials-footer__content">
+                        <div class="testimonials-footer__title">Paul Tshilombo</div>
+                        <div class="testimonials-footer__text">Professeur de Droit</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div data-anim-child="slide-left delay-4" class="testimonials -type-1">
+                  <div class="testimonials__content">
+                    <h4 class="testimonials__title">Formation Pratique</h4>
+                    <p class="testimonials__text">
+                      "La formation à l'Université de Cepromad Lualaba est très pratique et axée sur les
+                      besoins du marché du travail, ce qui m'a bien préparé pour ma carrière."
+                    </p>
+                    <div class="testimonials-footer">
+                      <div class="testimonials-footer__image">
+                        <img src="img/testimonials/4.jpeg" alt="image">
+                      </div>
+                      <div class="testimonials-footer__content">
+                        <div class="testimonials-footer__title">Sophie Mbuyi</div>
+                        <div class="testimonials-footer__text">Ancienne étudiante en Économie</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="d-flex x-gap-20 items-center justify-end pt-60 lg:pt-40">
+              <div class="col-auto">
+                <button class="button -outline-white text-white size-50 rounded-full d-flex justify-center items-center js-prev">
+                  <i class="icon icon-arrow-left text-24"></i>
+                </button>
+              </div>
+              <div class="col-auto">
+                <button class="button -outline-white text-white size-50 rounded-full d-flex justify-center items-center js-next">
+                  <i class="icon icon-arrow-right text-24"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div data-anim-wrap class="row y-gap-30 counter__row">
+            <div class="col-lg-3 col-sm-6">
+              <div data-anim-child="slide-left delay-1" class="counter -type-1">
+                <div class="counter__number">50,000+</div>
+                <div class="counter__title">Étudiants</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div data-anim-child="slide-left delay-2" class="counter -type-1">
+                <div class="counter__number">10+</div>
+                <div class="counter__title">Partenariats Industriels</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div data-anim-child="slide-left delay-3" class="counter -type-1">
+                <div class="counter__number">50+</div>
+                <div class="counter__title">Professeurs Qualifiés</div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div data-anim-child="slide-left delay-4" class="counter -type-1">
+                <div class="counter__number">17+</div>
+                <div class="counter__title">Departments</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout-pt-lg layout-pb-lg bg-beige-1">
+        <div data-anim-wrap class="container">
+          <div class="row y-gap-30 justify-between items-center">
+            <div class="col-xl-5 col-lg-6 col-md-10 order-2 order-lg-1">
+              <div class="about-content">
+                <h2 data-anim-child="slide-up delay-1" class="about-content__title"><span>Découvrez</span> de nouvelles opportunités avec nous.</h2>
+                <p data-anim-child="slide-up delay-2" class="about-content__text">
+                  Découvrez les avantages uniques de l'Université de Cepromad Lualaba.
+                </p>
+                <div data-anim-child="slide-up delay-3" class="y-gap-20 pt-30">
+
+                  <div class="d-flex items-center">
+                    <div class="about-content-list__icon">
+                      <i class="icon" data-feather="check"></i>
+                    </div>
+                    <div class="about-content-list__title">Professeurs Qualifiés et Expérimentés</div>
+                  </div>
+
+                  <div class="d-flex items-center">
+                    <div class="about-content-list__icon">
+                      <i class="icon" data-feather="check"></i>
+                    </div>
+                    <div class="about-content-list__title">Programmes Académiques Adaptés au Marché</div>
+                  </div>
+
+                  <div class="d-flex items-center">
+                    <div class="about-content-list__icon">
+                      <i class="icon" data-feather="check"></i>
+                    </div>
+                    <div class="about-content-list__title">Partenariats Industriels Solides</div>
+                  </div>
+
+                  <div class="d-flex items-center">
+                    <div class="about-content-list__icon">
+                      <i class="icon" data-feather="check"></i>
+                    </div>
+                    <div class="about-content-list__title">Environnement d'Apprentissage Moderne</div>
+                  </div>
+
+                </div>
+
+                <div data-anim-child="slide-up delay-4" class="d-inline-block mt-30">
+                  <a href="./contact" class="button -md -dark-1 text-white">Rejoignez-Nous</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-6 order-1 order-lg-2">
+              <div data-anim-child="slide-up delay-5" class="about-image">
+                <img src="img/graduate/2.jpg" alt="image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout-pt-lg layout-pb-lg bg-dark-2">
+        <div data-anim-wrap class="container">
+          <div class="row justify-center text-center">
+            <div data-anim-child="slide-up delay-1" class="col-auto">
+              <div class="sectionTitle">
+                <h2 class="sectionTitle__title text-white">Pourquoi étudier à l'Université de Cepromad Lualaba?</h2>
+                <p class="sectionTitle__text text-white">Découvrez les étapes de votre réussite avec nous.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row y-gap-30 pt-50">
+            <div data-anim-child="slide-up delay-2" class="col-lg-4 col-md-6">
+              <div class="stepCard -type-1 -stepCard-hover">
+                <div class="stepCard__content">
+                  <div class="stepCard__icon">
+                    <i class="icon-online-learning-4 text-64 text-green-1"></i>
+                  </div>
+                  <h4 class="stepCard__title">01. Apprendre</h4>
+                  <p class="stepCard__text">Acquérez des connaissances approfondies grâce à nos programmes académiques de qualité.</p>
+                </div>
+              </div>
+            </div>
+
+            <div data-anim-child="slide-up delay-3" class="col-lg-4 col-md-6">
+              <div class="stepCard -type-1 -stepCard-hover">
+                <div class="stepCard__content">
+                  <div class="stepCard__icon">
+                    <i class="icon-graduation-1 text-64 text-green-1"></i>
+                  </div>
+                  <h4 class="stepCard__title">02. Obtenir un Diplôme</h4>
+                  <p class="stepCard__text">Obtenez un diplôme reconnu qui vous ouvrira les portes d'une carrière prometteuse.</p>
+                </div>
+              </div>
+            </div>
+
+            <div data-anim-child="slide-up delay-4" class="col-lg-4 col-md-6">
+              <div class="stepCard -type-1 -stepCard-hover">
+                <div class="stepCard__content">
+                  <div class="stepCard__icon">
+                    <i class="icon-working-at-home-2 text-64 text-green-1"></i>
+                  </div>
+                  <h4 class="stepCard__title">03. Travailler</h4>
+                  <p class="stepCard__text">Intégrez le marché du travail avec les compétences et l'expérience nécessaires pour réussir.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="layout-pt-lg layout-pb-lg">
+        <div data-anim-wrap class="container">
+          <div data-anim-child="slide-left delay-1" class="row y-gap-20 justify-between items-center">
+            <div class="col-lg-6">
+              <div class="sectionTitle">
+                <h2 class="sectionTitle__title">Nos Diplômés à Succès</h2>
+                <p class="sectionTitle__text">Découvrez les réussites de nos anciens étudiants.</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <a href="register" class="button -icon -purple-3 text-purple-1">
+                Voir Tous les Anciens
+                <i class="icon-arrow-top-right text-13 ml-10"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="row y-gap-30 pt-50">
+                          <div class="col-lg-3 col-sm-6">
+                <div data-anim-child="slide-left delay-2" class="teamCard -type-1 -teamCard-hover">
+                  <div class="teamCard__image">
+                    <img src="img/graduate/1.jpg" alt="Diplômé 1">
+                    <div class="teamCard__socials">
+                      <div class="d-flex x-gap-20 y-gap-10 justify-center items-center h-100">
+                        <a href="#"><i class="icon-facebook text-white"></i></a>
+                        <a href="#"><i class="icon-twitter text-white"></i></a>
+                        <a href="#"><i class="icon-instagram text-white"></i></a>
+                        <a href="#"><i class="icon-linkedin text-white"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="teamCard__content">
+                    <h4 class="teamCard__title">Diplômé 1</h4>
+                    <p class="teamCard__text">Carrière exemplaire</p>
+                    <div class="row items-center y-gap-10 x-gap-10 pt-10">
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-star text-yellow-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12 text-yellow-1 fw-500">4.5</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-online-learning text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Étudiants inspirés</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-play text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Réalisations</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="col-lg-3 col-sm-6">
+                <div data-anim-child="slide-left delay-3" class="teamCard -type-1 -teamCard-hover">
+                  <div class="teamCard__image">
+                    <img src="img/graduate/2.jpg" alt="Diplômé 2">
+                    <div class="teamCard__socials">
+                      <div class="d-flex x-gap-20 y-gap-10 justify-center items-center h-100">
+                        <a href="#"><i class="icon-facebook text-white"></i></a>
+                        <a href="#"><i class="icon-twitter text-white"></i></a>
+                        <a href="#"><i class="icon-instagram text-white"></i></a>
+                        <a href="#"><i class="icon-linkedin text-white"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="teamCard__content">
+                    <h4 class="teamCard__title">Diplômé 2</h4>
+                    <p class="teamCard__text">Carrière exemplaire</p>
+                    <div class="row items-center y-gap-10 x-gap-10 pt-10">
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-star text-yellow-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12 text-yellow-1 fw-500">4.5</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-online-learning text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Étudiants inspirés</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-play text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Réalisations</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="col-lg-3 col-sm-6">
+                <div data-anim-child="slide-left delay-4" class="teamCard -type-1 -teamCard-hover">
+                  <div class="teamCard__image">
+                    <img src="img/graduate/3.jpg" alt="Diplômé 3">
+                    <div class="teamCard__socials">
+                      <div class="d-flex x-gap-20 y-gap-10 justify-center items-center h-100">
+                        <a href="#"><i class="icon-facebook text-white"></i></a>
+                        <a href="#"><i class="icon-twitter text-white"></i></a>
+                        <a href="#"><i class="icon-instagram text-white"></i></a>
+                        <a href="#"><i class="icon-linkedin text-white"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="teamCard__content">
+                    <h4 class="teamCard__title">Diplômé 3</h4>
+                    <p class="teamCard__text">Carrière exemplaire</p>
+                    <div class="row items-center y-gap-10 x-gap-10 pt-10">
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-star text-yellow-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12 text-yellow-1 fw-500">4.5</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-online-learning text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Étudiants inspirés</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-play text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Réalisations</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="col-lg-3 col-sm-6">
+                <div data-anim-child="slide-left delay-5" class="teamCard -type-1 -teamCard-hover">
+                  <div class="teamCard__image">
+                    <img src="img/graduate/4.jpg" alt="Diplômé 4">
+                    <div class="teamCard__socials">
+                      <div class="d-flex x-gap-20 y-gap-10 justify-center items-center h-100">
+                        <a href="#"><i class="icon-facebook text-white"></i></a>
+                        <a href="#"><i class="icon-twitter text-white"></i></a>
+                        <a href="#"><i class="icon-instagram text-white"></i></a>
+                        <a href="#"><i class="icon-linkedin text-white"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="teamCard__content">
+                    <h4 class="teamCard__title">Diplômé 4</h4>
+                    <p class="teamCard__text">Carrière exemplaire</p>
+                    <div class="row items-center y-gap-10 x-gap-10 pt-10">
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-star text-yellow-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12 text-yellow-1 fw-500">4.5</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-online-learning text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Étudiants inspirés</div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex items-center">
+                          <div class="icon-play text-light-1 text-11 mr-5"></div>
+                          <div class="text-14 lh-12">Réalisations</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                      </div>
+
+          <div class="row justify-center text-center pt-60 lg:pt-40">
+            <div class="col-auto">
+              <p class="lh-1">Vous souhaitez rejoindre notre communauté de diplômés à succès? <a
+                  class="text-purple-1 underline" href="./contact">Rejoignez-nous!</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout-pt-lg layout-pb-lg bg-light-3">
+        <div data-anim-wrap class="container">
+          <div class="row y-gap-20 items-center">
+            <div class="col-xl-7 col-lg-7">
+              <div data-anim-child="slide-up delay-1" class="app-image">
+                <img src="img/app/2.png" alt="image">
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="app-content">
+                <h2 data-anim-child="slide-up delay-3" class="app-content__title">Accédez à l'Université<br><span>Partout</span></h2>
+                <p data-anim-child="slide-up delay-4" class="app-content__text">Restez connecté avec l'Université de Cepromad Lualaba où que vous soyez. Consultez les informations importantes et restez informé.</p>
+                <div data-anim-child="slide-up delay-5" class="app-content__buttons">
+                  <div class="col-12 col-sm-auto">
+                    <a data-barba href="./contact" class="button -md -purple-1 text-white">Admissions</a>
+                  </div>
+                  <div class="col-12 col-sm-auto">
+                    <a data-barba href="./login" class="button -md -outline-green-1 text-green-1">Connextion</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="layout-pt-md layout-pb-md bg-purple-1">
+        <div class="container">
+          <div class="row y-gap-20 justify-between items-center">
+            <div class="col-xl-8 col-lg-5">
+              <h2 class="text-30 lh-15 text-white">
+                Rejoignez notre communauté de <span class="text-green-1">milliers d'étudiants</span>
+              </h2>
+            </div>
+
+            <div class="col-auto">
+              <a href="./login" class="button -md -green-1 text-dark-1">Connexion</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer -type-1 bg-dark-1 -green-links">
+    <div class="container">
+
+
+        <div class="py-30 border-top-light-15">
+            <div class="row justify-between items-center y-gap-20">
+                <div class="col-auto">
+                    <div class="d-flex items-center h-100 text-white">
+                        © 2026 Université de Cepromad Lualaba. Tous droits réservés.
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="d-flex x-gap-20 y-gap-20 items-center flex-wrap">
+                        <div>
+                            <div class="d-flex x-gap-15 text-white">
+                                <a href="#">Aide</a>
+                                <a href="#">Politique de confidentialité</a>
+                                <a href="#">Utilisation des cookies</a>
+                                <a href="#">Sécurité</a>
+                                <a href="#">Conditions d'utilisation</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="#" class="button px-30 h-50 -dark-6 rounded-200 text-white">
+                                <i class="icon-worldwide text-20 mr-15"></i><span class="text-15">Français</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
