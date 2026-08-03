@@ -101,6 +101,55 @@
                  opacity: 1;
                  transform: translateY(0);
         }
+        /* Conteneur et style du bouton */
+    .glow-btn {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #00c6ff, #0072ff); /* Dégradé bleu */
+      box-shadow: 0 0 15px rgba(0, 198, 255, 0.4); /* Halo lumineux de base */
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
+    }
+
+    /* Effet d'halo lumineux supplémentaire autour */
+    .glow-btn::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, #00c6ff, #0072ff, #00c6ff);
+      border-radius: 50px;
+      z-index: -1;
+      filter: blur(10px); /* Effet flou pour créer la lumière */
+      opacity: 0.7;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Effet au survol du curseur (Hover) */
+    .glow-btn:hover {
+      transform: translateY(-3px) scale(1.02); /* Petit sursaut vers le haut */
+      box-shadow: 0 0 25px rgba(0, 198, 255, 0.8),
+                  0 0 50px rgba(0, 114, 255, 0.6); /* Lumière plus intense */
+    }
+
+    .glow-btn:hover::before {
+      opacity: 1; /* Augmente la clarté de la lumière */
+    }
+
+    /* Effet au clic (Active) */
+    .glow-btn:active {
+      transform: translateY(1px);
+    }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -337,7 +386,10 @@
                     "On sait où l'on va quand on sait d'où l'on vient."
                 </div>
             </div>
-
+<!-- Le bouton pointe vers ta page HTML -->
+  <a href="HISTOIRE_DE_NOTRE_FAMILLE_GUNDIMBA.html" class="glow-btn">
+    Voir l'histoire complète et les images de notre famille Gundimba.
+  </a>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="group">
                     <div class="relative overflow-hidden rounded-[2rem] shadow-2xl">
