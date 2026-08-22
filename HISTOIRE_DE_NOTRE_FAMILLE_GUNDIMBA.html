@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L’Histoire de notre famille Gundimba</title>
+
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
-            --primary-green: #2da44e;
             --primary-dark: #24292f;
             --bg-gradient: linear-gradient(135deg, #e0f2fe, #fef3c7);
             --card-bg: #ffffff;
@@ -14,19 +18,43 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--bg-gradient);
             margin: 0;
             padding: 20px;
         }
 
-        h1 {
+        /* En-tête principal */
+        .header-title {
+            background: linear-gradient(135deg, #0d6efd, #0a58ca);
+            color: white;
+            padding: 2.5rem 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
             text-align: center;
-            font-size: 5rem;
-            margin-bottom: 30px;
         }
 
-        /* Organisation de la galerie en grille réactive */
+        .header-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-title p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Titre animé */
+        .animated-heading {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        /* Grille réactive pour les membres */
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -35,7 +63,7 @@
             margin: 0 auto;
         }
 
-        /* Design de chaque carte de membre */
+        /* Style des cartes */
         .member-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -70,48 +98,45 @@
             color: #64748b;
             margin: 0;
         }
-          
-        .header-title {
-            background: linear-gradient(135deg, #0d6efd, #0a58ca);
-            color: white;
-            padding: 3rem 1rem;
-            border-radius: 0 0 0px 0px;
-            margin-bottom: 2rem;
-            
+
+        /* Règle pour l'impression */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: none;
+                padding: 0;
+            }
         }
-        p{
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size:50px;
-        }
-        /* Règle appliquée uniquement lors de l'impression */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-}
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
- <header class="header-title text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Mémoire et Espérance</h1>
-            <p class="lead mb-0">L'histoire de la famille Gundimba et l'émergence de SMART INFO RDC</p>
+
+    <!-- En-tête -->
+    <header class="header-title">
+        <div>
+            <h1>Mémoire et Espérance</h1>
+            <p>L'histoire de la famille Gundimba et l'émergence de SMART INFO RDC</p>
         </div>
     </header>
-    <h1 id="animatedText">
+
+    <!-- Citation / Devise de la famille -->
+    <h2 id="animatedText" class="animated-heading">
         Dieu crée l'espérance au cœur du désespoir
-    </h1>
-  <div class="fixed bottom-8 right-8 no-print z-50">
-    <button 
-      onclick="window.print()" 
-      class="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium px-6 py-3.5 rounded-full shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-in-out cursor-pointer">
-      <i class="fas fa-print text-lg group-hover:scale-110 transition-transform duration-200"></i>
-      <span class="tracking-wide text-sm">Imprimer en PDF</span>
-    </button>
-  </div>
+    </h2>
+
+    <!-- Bouton Imprimer (Fixe en bas à droite) -->
+    <div class="fixed bottom-8 right-8 no-print z-50">
+        <button 
+            onclick="window.print()" 
+            class="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium px-6 py-3.5 rounded-full shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-in-out cursor-pointer">
+            <i class="fas fa-print text-lg group-hover:scale-110 transition-transform duration-200"></i>
+            <span class="tracking-wide text-sm">Imprimer en PDF</span>
+        </button>
+    </div>
+
+    <!-- Galerie des Membres -->
     <main class="gallery-container">
         <!-- 1. Le Père -->
         <div class="member-card">
@@ -134,11 +159,11 @@
             <p>Notre deuxième mère</p>
         </div>
 
-        <!-- 4. Grand Frère -->
+        <!-- 4. Grand-mère -->
         <div class="member-card">
-            <img src="koko.jpg" alt="Photo de molito souza">
+            <img src="koko.jpg" alt="Photo de Souza Molito">
             <h3>Souza Molito</h3>
-            <p>Notre grand mère</p>
+            <p>Notre grand-mère</p>
         </div>
 
         <!-- 5. Ir Bertin -->
@@ -148,137 +173,159 @@
             <p>Ingénieur / Membre de la famille</p>
         </div>
 
-        <!-- 6 à 25 : Membres suivants (Remplace les noms et rôles) -->
+        <!-- 6. Trésor -->
         <div class="member-card">
-            <img src="tresor.jpg" alt="Photo membre 6">
-            <h3>Tresor Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="tresor.jpg" alt="Photo de Trésor Gundimba">
+            <h3>Trésor Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 7. Fiston -->
         <div class="member-card">
-            <img src="fiston.jpg" alt="Photo membre 7">
+            <img src="fiston.jpg" alt="Photo de Fiston Gundimba">
             <h3>Fiston Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 8. Exode -->
         <div class="member-card">
-            <img src="exode.jpg" alt="Photo membre 8">
+            <img src="exode.jpg" alt="Photo de Exode Gundimba">
             <h3>Exode Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 9. GEPA -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 9">
+            <img src="images/photo3.jpg" alt="Photo de GEPA Gundimba">
             <h3>GEPA Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 10. Souza -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 10">
+            <img src="images/photo3.jpg" alt="Photo de Souza Gundimba">
             <h3>Souza Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 11. Bertin -->
         <div class="member-card">
-            <img src="bertin1.jpg" alt="Photo membre 11">
-            <h3>Berin Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="bertin1.jpg" alt="Photo de Bertin Gundimba">
+            <h3>Bertin Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 12. Josué -->
         <div class="member-card">
-            <img src="josue.jpg" alt="Photo membre 12">
-            <h3>josué Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="josue.jpg" alt="Photo de Josué Gundimba">
+            <h3>Josué Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 13. Domain -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 13">
+            <img src="images/photo3.jpg" alt="Photo de Domain Gundimba">
             <h3>Domain Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 14. Dodo -->
         <div class="member-card">
-            <img src="dodo.jpg" alt="Photo membre 14">
-            <h3>DODO Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="dodo.jpg" alt="Photo de Dodo Gundimba">
+            <h3>Dodo Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 15. Marthe -->
         <div class="member-card">
-            <img src="marth.jpg" alt="Photo membre 15">
-            <h3>Marth Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="marth.jpg" alt="Photo de Marthe Gundimba">
+            <h3>Marthe Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 16. Merveille -->
         <div class="member-card">
-            <img src="merveille.jpg" alt="Photo membre 16">
-            <h3>Merveillw Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="merveille.jpg" alt="Photo de Merveille Gundimba">
+            <h3>Merveille Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 17. Pauline -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 17">
+            <img src="images/photo3.jpg" alt="Photo de Pauline Gundimba">
             <h3>Pauline Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 18. Benjamin -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 18">
+            <img src="images/photo3.jpg" alt="Photo de Benjamin Gundimba">
             <h3>Benjamin Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 19. Gaston -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 19">
+            <img src="images/photo3.jpg" alt="Photo de Gaston Gundimba">
             <h3>Gaston Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 20. Frederick -->
         <div class="member-card">
-            <img src="images/photo3.jpg" alt="Photo membre 20">
+            <img src="images/photo3.jpg" alt="Photo de Frederick Gundimba">
             <h3>Frederick Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 21. Virginie -->
         <div class="member-card">
-            <img src="martn.jpg" alt="Photo membre 21">
-            <h3>Virigin Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <img src="martn.jpg" alt="Photo de Virginie Gundimba">
+            <h3>Virginie Gundimba</h3>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 22. Martin -->
         <div class="member-card">
-            <img src="martin.jpg" alt="Photo membre 22">
+            <img src="martin.jpg" alt="Photo de Martin Gundimba">
             <h3>Martin Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 23. Petit-papa -->
         <div class="member-card">
-            <img src="petit.jpg" alt="Photo membre 23">
+            <img src="petit.jpg" alt="Photo de Petit-papa Gundimba">
             <h3>Petit-papa Gundimba</h3>
-            <p>Rôle ou lien de parenté</p>
+            <p>Membre de la famille</p>
         </div>
 
+        <!-- 24. Membre 24 -->
         <div class="member-card">
             <img src="f.jpg" alt="Photo membre 24">
             <h3>Nom du membre 24</h3>
             <p>Rôle ou lien de parenté</p>
         </div>
 
+        <!-- 25. Membre 25 -->
         <div class="member-card">
             <img src="fa.jpg" alt="Photo membre 25">
             <h3>Nom du membre 25</h3>
             <p>Rôle ou lien de parenté</p>
         </div>
     </main>
-        
+
+    <!-- Animation du texte -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const h1 = document.getElementById("animatedText");
+            const heading = document.getElementById("animatedText");
             let hue = 0;
+            
             function animate() {
                 hue = (hue + 1) % 360;
-                h1.style.color = `hsl(${hue}, 100%, 35%)`; // Couleur un peu plus foncée pour être plus lisible
+                heading.style.color = `hsl(${hue}, 80%, 30%)`;
                 requestAnimationFrame(animate);
             }
+            
             animate();
         });
     </script>
